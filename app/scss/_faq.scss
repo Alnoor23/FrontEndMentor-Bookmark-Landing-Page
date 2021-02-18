@@ -1,0 +1,75 @@
+.faq {
+    max-width: 550px;
+
+    &__header {
+        text-align: center;
+        margin-bottom: 35px;
+        
+
+        h2 {
+            color: $VeryDarkBlue;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: $GrayishBlue;
+            font-size: 0.875rem;
+            line-height: 1.5;
+        }
+
+
+    }
+
+    .question {
+
+
+        .que-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+
+            .que {
+                color: $VeryDarkBlue;
+                font-weight: 500;
+                font-size: 0.875rem;
+                text-align: left;
+                margin: 20px 0px;
+            }
+
+            svg {
+                stroke: rgb(82, 103, 223);
+                
+                path {
+                    stroke: inherit;
+                }
+            }
+
+            &:hover {
+                
+                .que {
+                    color: rgb(228, 88, 88);
+                }
+            }
+        }
+
+        .ans {
+            color: $GrayishBlue;
+            max-height: 0;
+            font-size: 0.875rem;
+            overflow: hidden;
+        }
+    }
+
+    &__button {
+        display: block;
+        margin: 50px auto;
+        background-color: royalblue;
+        border: 2px solid royalblue;
+
+        &:hover {
+            background-color: transparent;
+            color: royalblue;
+        }
+    }
+}

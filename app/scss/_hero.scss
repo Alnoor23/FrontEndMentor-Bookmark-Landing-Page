@@ -1,0 +1,138 @@
+.hero {
+    overflow-x: hidden;
+
+    .container {
+        margin-top: 30px;
+        flex-direction: column-reverse;
+
+        @include breakpoint-up(large) {
+            width: 1250px;
+            padding-left: 15px;
+            margin-top: 80px;
+            flex-direction: row;
+        }
+    }
+
+    &__text {
+        margin-top: 2.5rem;
+        width: 17.375rem;
+        text-align: center;
+
+        @include breakpoint-up(medium) {
+            width: 450px;
+        }
+
+        @include breakpoint-up(xlarge){
+            margin-top: 0;
+            width: 30rem;
+            text-align: left;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: $VeryDarkBlue;
+            margin-bottom: 2.1875rem;
+
+            @include breakpoint-up(medium) {
+                font-size: 1.875rem;
+            }
+
+            @include breakpoint-up(large) {
+                font-size: 2.3rem;
+            }
+
+            @include breakpoint-up(xlarge) {
+                font-size: 2.5rem;
+            }
+        }
+        p {
+            font-size: 1rem;
+            color: $GrayishBlue;
+            line-height: 1.45;
+            margin-bottom: 2.1875rem;
+
+            @include breakpoint-up(large) {
+                font-size: 1.125rem;
+            }
+        }
+
+        &__button {
+            height: 40px;
+            width: 120px;
+            font-size: 0.75rem;
+            font-weight: 400;
+            padding-top: 12px;
+            box-shadow: 0px 6px 5px -1px rgb(223, 223, 223);
+            margin: 10px 5px;
+
+            @include breakpoint-up(medium){
+                height: 46px;
+                width: 150px;
+                font-weight: 450;
+            }
+
+            @include breakpoint-up(large){
+                height: 48px;
+                width: 165px;
+                font-size: 1rem;
+                font-weight: 450;
+            }
+        }
+
+        .button-chrome {
+            color: #fff;
+            background-color: #5266E3;
+            border: 2px solid #5266E3;
+
+            &:hover {
+                color: #5266E3;
+                background-color: transparent;
+                border: 2px solid #5266E3;
+            }
+        }
+
+        .button-firefox {
+            color: rgb(116, 116, 116);
+            background-color: #F7F7F7;
+            border: 2px solid #F7F7F7;
+
+            &:hover {
+                color: rgb(139, 139, 139);
+                border: 2px solid rgb(139, 139, 139);
+                background-color: transparent;
+            }
+        }
+    }
+
+    &__image {
+        position: relative;
+
+        img {   
+            height: 205px;
+            width: 310px;
+
+            @include breakpoint-up(medium){
+                height: 395px;
+                width: 500px;
+            }
+
+            @include breakpoint-up(xlarge){
+                height: auto;
+                width: auto;
+            }
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            display: block;
+            bottom: 0px;
+            left: 90px;
+            width: 2000px;
+            height: 80%;
+            border-radius: 300px;
+            background: #5368df;
+        }
+    }
+}
